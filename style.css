@@ -11,64 +11,186 @@ body,html {
 }
 
 
+h3 {
+  color:#1f76ab;
+}
+
+h4{
+  color:#1f76ab;
+}
+
+.contactbutton{
+  margin:0px 5px 0px 20px;
+  padding:5px 8px ;
+  font-size: 18px;
+  border:3px solid #1f76ab;
+  border-radius: 0px ;
+  text-decoration: none;
+  color:white ;
+  background-color: #1f76ab ;
+
+}
+.contactbutton:hover {
+
+  color: #1f76ab;
+  background-color: white;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn { 
+  border: none;
+  outline: none;
+  color: black;
+ color: black;
+  text-align: center;
+  padding: 0px;
+  margin:0px 0px;
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 8px;
+  border-radius: 0px;
+  padding-top: 10px;
+  background-color: inherit;
+
+}
+
+
+
+.dropdown-content {
+  margin-top: 44px;
+  padding-bottom: 40px;
+  position: absolute;
+
+  display: none;
+  background-color: white;
+  width: 100%;
+
+  left: 0;
+  box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.1);
+  z-index: 99;
+}
+
+.dropdown-content .header {
+
+  margin-top: 12px;
+  background: #1f76ab;
+  padding: 2px 20px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+
+.row{
+    padding-left: 20px;
+}
+
+.column {
+  float: left;
+  width: 20%;
+
+  text-align: left;
+
+display: block;
+}
+.column3 {
+  float: left;
+  width: 33.333%;
+
+  text-align: center;
+
+display: block;
+}
+.column a {
+  float: none !important;
+  color: black;
+  padding: 1px;
+  text-decoration: none;
+  display: block !important;
+  text-align: left!important;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
 .flex-container{
-  margin-left: 10px;
-  margin-right:10px;
+
+  margin: 0px 5%;
+
+  padding:0px;
   display:flex;
   flex-flow: row wrap;
   justify-content: center;
-  text-align: left;
+  text-align: center;
+
+
 
 }
 
 .flex-item{
-  flex-basis: 35%;
-  min-width: 500px;
-  padding:15px;
-  margin:5px;
-  background-color: lightgrey;
+  flex-basis: 25%;
+  min-width: 250px;
+  max-width: 300px;
+  padding:10px 15px;
+  margin:5px 5px;
+
+  text-align: center;
+
 }
 
 .flex-item-big{
-  flex-basis: 48%;
-  min-width: 30%;
-  padding:15px;
-  margin:5px;
-  background-color: lightgrey;
+  flex-basis: 50%;
+  min-width: 10%;
+  padding:20px;
+  margin:0px;
+  
 }
 .flex-item-small{
-  flex-basis: 340px;
-  min-width: 25%;
-  padding:15px;
-  margin:5px;
-  background-color: lightgrey;
+  flex-basis: 250px;
+  min-width:30%;
+  padding:50px 45px;
+  margin:10px;
+
+
 }
 
 
 
 
-@media (max-width: 840px){
+@media (max-width: 1000px){
   .flex-container{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
-  .flex-item{
-  flex-basis: 35%;
-  min-width: 90%;
-  padding:10px;
-  background-color: lightgrey;
-}
+
 .flex-item-big{
   flex-basis: 35%;
   min-width: 90%;
-  padding:10px;
-  background-color: lightgrey;
+  padding: 5px 10px;
 }
   .flex-item-small{
   flex-basis: 35%;
   min-width: 90%;
-  padding:10px;
-  background-color: lightgrey;
+  padding:5px 10px;
 }
 
 }
@@ -77,7 +199,7 @@ body,html {
 /* nav bar*/
 
 #navbar {
-  overflow: hidden;
+
   background-color: white;
   padding: 0px 0px;
   transition: 0.4s;
@@ -135,6 +257,7 @@ body,html {
 
 
 #consult{
+  float:right;
     margin:0px 5px 0px 20px!important;
     padding:5px 8px !important;
     font-size: 18px!important;
@@ -161,7 +284,7 @@ body,html {
   text-align: center!important;
   position: relative!important;
   overflow: hidden!important;
-  z-index:99 !important;
+  z-index:98 !important;
   background-color: #1f76ab;
   color:white !important;
   padding:1px!important;
@@ -177,6 +300,11 @@ body,html {
 #icon{
   color: #1f76ab;
 }
+
+
+
+
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -186,6 +314,7 @@ body,html {
   margin-bottom: 0px;
   color: white;
   background-color: #1f76ab;
+  font-size: 12px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -193,7 +322,7 @@ body,html {
 
 
 /* Responsive to screen width*/
-@media screen and (min-width: 1101px) {
+@media screen and (min-width: 1201px) {
   #navbar-right {
     display:block !important;
     margin:10px 20px ;
@@ -213,10 +342,13 @@ body,html {
   #pagepad{
     padding-top:120px;
   }
+  .moblink{
+    display:none;
+  }
 
 }
 
-@media screen and (max-width: 1100px) and (min-width:781px){
+@media screen and (max-width: 1200px) and (min-width:881px){
  #navbar #logo {
   width:200px !important;
   margin:0px !important;
@@ -242,11 +374,14 @@ body,html {
   #pagepad{
     padding-top:40px;
   }
+  .moblink{
+    display:none;
+  }
 
 }
 
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 880px) {
   #pagepad{
     margin-top:0px;
   }
@@ -310,31 +445,49 @@ body,html {
   }
 
   #footer{
-    font-size: 12px;
+    font-size: 10px;
+  }
+  .dropdown{
+    display: none;
   }
 
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`~*/
 
-.column {
-  text-align: center;
-  float: left;
-  width: 33.33%;
-  padding: 0px;
-  } 
+.approach-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("learnathome.jpg");
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  }
+.approach-text {
+  text-align: left;
+  position: absolute;
+  top: 85%;
+  left: 20px;
+  transform: translate(0%, -50%);
+  color: white;
+}
+.about-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("onlinelearning2.jpg");
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
 
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("learninggirl.jpg");
-  height: 90%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("approach1.jpg");
+  height: 80%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -355,7 +508,6 @@ body,html {
   border: none;
   outline: 0;
   display: inline-block;
-  font-weight: bold;
   font-size: 16px;
   padding: 10px 15px;
   color: white;
@@ -365,7 +517,7 @@ body,html {
 }
 
 .hero-text button:hover {
-  background-color: #555;
+  background-color:lightblue ;
   color: white;
 }
 
